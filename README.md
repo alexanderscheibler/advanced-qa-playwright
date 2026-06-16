@@ -56,4 +56,4 @@ TypeScript · Playwright · Page Object Model · GitHub Actions · PostgREST (DB
 
 ## Version
 
-`1.0.0` · MIT · [alexanderscheibler](https://github.com/alexanderscheibler)
+`1.0.1` · MIT · [alexanderscheibler](https://github.com/alexanderscheibler)

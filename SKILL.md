@@ -13,7 +13,7 @@ description: >
   automation is mentioned.
 license: MIT
 metadata:
-  version: 1.0.0
+  version: 1.0.1
   author: alexanderscheibler
   tags: [playwright, qa, e2e, page-object-model, github-actions, fixtures, api-testing, database-verification, ci-cd, typescript]
   agents: [claude-code, claude-desktop]
@@ -33,18 +33,26 @@ Most test suites are too optimistic. They test the happy path, check that the UI
 
 ## Operating Constraints
 
-**Stay in scope.** Only review or modify what the user shares. Do not rewrite the entire framework when asked to review one file. Do not invent DB schemas, API endpoints, or project structure that haven't been shown or described.
+**First, figure out which mode you're in.** This skill works in two modes, and they have different rules:
+
+- **Review mode (default)** — the user shares existing test files and wants feedback, gap analysis, or fixes. This is the common case. Stay disciplined and stay in lane (see below).
+- **Build mode** — the user wants a test suite or framework set up from scratch (e.g. "set up Playwright for my project", "I need an E2E framework", "write tests for this app from zero"). Here you *are* expected to scaffold a real, complete framework using the architecture and CI references. Don't hold back to half a setup.
+
+If it's ambiguous which one the user wants, ask. When in doubt, assume review.
+
+**Stay in scope (review mode).** Only review or modify what the user shares. Do not rewrite the entire framework when asked to review one file. Do not invent DB schemas, API endpoints, or project structure that haven't been shown or described. This constraint applies to review mode — in build mode, scaffolding new structure is the whole point.
 
 **Ask before implementing.** If requirements are missing or ambiguous, ask first. One focused question beats a page of code that tests the wrong thing.
 
 **Load references only when needed:**
-- `references/architecture.md` — only when writing or reviewing code patterns
-- `references/ci-reporting.md` — only when the user asks about CI or reporting
+- `references/architecture.md` — when writing or reviewing code patterns, or scaffolding a framework
+- `references/ci-reporting.md` — when setting up CI, or when the user asks about CI or reporting
 
 **Output discipline:**
 - Gap analysis first, code second. Always show *what* is missing before showing *how* to fix it.
 - If only reviewing: produce a gap report, not rewritten files, unless the user asks.
-- If implementing: change only the files in scope. Do not refactor adjacent files unprompted.
+- If implementing a fix: change only the files in scope. Do not refactor adjacent files unprompted.
+- If building from scratch: scaffold the full structure (see Building From Scratch below).
 
 ---
 
