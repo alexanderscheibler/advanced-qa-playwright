@@ -12,8 +12,10 @@ Made for small projects that need a e2e test suite implemented quickly.
 
 It works two ways.
 
+### Review Playwright specs
 Hand it an existing Playwright spec and it gives you a prioritised gap analysis before touching any code. Then, if you want, it writes the fixes. This is the default, and it stays in lane: it won't rewrite your whole framework when you asked about one file, and it won't invent endpoints or schemas you haven't shown it.
 
+### Build a framework from scratch
 Or start from zero. Ask it to set up a framework for a small project. It scaffolds the real thing - config, folder structure, Page Objects, fixtures, a first working spec, and a GitHub Actions workflow - right-sized to what the project actually needs.
 
 Both modes intend to cover the full QA surface: UI flows, API testing, database verification, CI/CD, and flaky test diagnosis.
