@@ -13,9 +13,9 @@ description: >
   automation is mentioned.
 license: MIT
 metadata:
-  version: 2.2.1
+  version: 1.0.0
   author: alexanderscheibler
-  tags: [playwright, qa, istqb, e2e, page-object-model, github-actions, fixtures, api-testing, database-verification, ci-cd, typescript]
+  tags: [playwright, qa, e2e, page-object-model, github-actions, fixtures, api-testing, database-verification, ci-cd, typescript]
   agents: [claude-code, claude-desktop]
 ---
 
